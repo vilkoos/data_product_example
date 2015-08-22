@@ -16,7 +16,7 @@ For more information about the lending club and the fitted regression model see 
 My 2013 results now are available to everyone in the form of two data products:  
 
 - a [shiny app](https://vilkoos.shinyapps.io/predict_lc_interest) with which you can use my regression model to calculate the interest rate the lending club would charge you.
-(for the same app with the required *but annoying* documentation [click here](https://vilkoos.shinyapps.io/predict_lending_club_interest_rate) )
+(the same app with the required *but annoying* documentation [click here](https://vilkoos.shinyapps.io/predict_lending_club_interest_rate))
 - a five slide HTML5 [pitch presentation](http://rpubs.com/vilkoos/dataprod) produced using R presenter.
 
 ## Files in this directory
