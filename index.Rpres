@@ -1,0 +1,73 @@
+predict your lending club interest rate
+========================================================
+author: W.Dijkhuis
+date: 20 August 2015
+
+INTRODUCTION
+========================================================
+
+.
+
+The **lending club** allows members:   
+- to directly invest in and borrow from each other 
+- to avoid banking cost    
+
+. 
+
+PROBLEM  
+- the interest rate is set by the lending club
+- you do not know the rate in advance
+
+
+
+
+MODEL TO PREDICT RATE
+========================================================
+
+.
+
+In 2013 I did fit a linear regression model to predict the rate.  
+
+My shiny app makes this model availlable to all.
+
+simply specify:
+- our credit worthiness (i.e. your FICO score)
+- the loan amount
+- the loan length in months
+
+and the app will predict the interest rate
+
+
+TRY IT FOR FREE
+========================================================
+
+.
+
+The app can be found on the shiny apps server 
+
+[https://vilkoos.shinyapps.io/predict_lending_club_interest_rate](https://vilkoos.shinyapps.io/predict_lending_club_interest_rate)
+
+.
+
+The app also can show three plots,   
+that you can use to compare your rate with others.  
+For an example see the next slide:  
+
+
+example Plot
+========================================================
+
+```{r, echo=FALSE}
+dat <- read.csv2("loans.csv",sep=",", dec=".", colClasses="numeric" )
+plot( dat$FICO, dat$IR,
+    type = "p",
+    col  = "blue",
+    ylim = c(0,30),
+    xlab = "FICO score",
+    ylab = "interest rate",
+    col.main = "gray",
+    main = "Compare your interest rate with 2500 others \n you are at the crossing of the red lines"
+    )
+abline( h = 13.89, lty = 1, lwd = 1, col = "red")
+abline( v = 700, lty = 1, lwd = 1, col = "red")
+```
